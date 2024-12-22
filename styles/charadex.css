@@ -51,7 +51,7 @@ body {
   /* ============================================================= */
   /* Navbar
   ================================================================ */
-  --cd-navbar-background-color:          #222222;
+  --cd-navbar-background-color:          #392158;
   --cd-navbar-brand-color:               var(--cd-primary-color);
   --cd-navbar-brand-color-hover:         var(--cd-secondary-color);
   --cd-navbar-text-color:                var(--cd-content-background-color);
@@ -529,6 +529,11 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background:linear-gradient(0deg, rgb(127, 101, 164) 70%, rgba(250,242,255,0) 100%) !important;
+  
+}
+
+html {
   background-image:url(https://f2.toyhou.se/file/f2-toyhou-se/images/64050395_GCi3VhoS8TGWezB.jpg);
   background-size:cover;
   background-position:center;
@@ -540,6 +545,7 @@ body {
     padding: 1rem;
     -ms-flex: 1 1 auto!important;
     flex: 1 1 auto!important;
+    background-color: rgb(127, 101, 164) 
 }
 
 @media (min-width: 768px) {
@@ -644,6 +650,23 @@ p:last-child {
 
 /*JINIPPY/VERNE TWEAKS (figuratively and literally) */
 .taobvh-logo {
-  filter: hue-rotate(10deg);
+  filter: hue-rotate(70deg);
+  height:70px;
+  object-fit: cover;
+  object-position: center; 
 }
 
+
+.taobvh-picture-logo {
+  filter: hue-rotate(70deg);
+}
+
+.secondaryheader {
+    list-style-type: none;
+
+}
+
+.secondaryheader .dropdown{
+position:absolute;
+z-index:20
+}
