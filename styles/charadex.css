@@ -718,3 +718,40 @@ z-index:20
 #header.visible {
   transform: translateY(-100%);
 }
+
+.global-footer {
+  --global-footer-links-in-column: 2;
+  background-color: #280033;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 30px;
+  word-wrap: break-word;
+  border: 0;
+  font: normal normal normal 100% inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: initial;
+}
+
+.global-footer__link, .global-footer__link:active, .global-footer__link:focus, .global-footer__link:visited {
+  color: #ffc500;
+  text-decoration: none;
+}
+
+.global-footer__link:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.global-footer__links {
+  list-style-type:none !important;
+}
+
+.global-footer__bottom {
+  background: #000;
+  font-size: 12px;
+  min-height: 50px;
+  padding: 0 20px;
+  text-align: center;
+}
