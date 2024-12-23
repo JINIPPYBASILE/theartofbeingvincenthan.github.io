@@ -2,7 +2,7 @@
     <div class="container">
 
         <!-- Brand -->
-        <a class="navbar-brand taobvh-logo mt-n3" href="index.html"><img  src="https://i.postimg.cc/FF03KZMn/IMG-9629.png" style="max-height:80px"></a>
+        <a class="navbar-brand taobvh-logo mt-n3" href="index.html"><img src="https://i.postimg.cc/FF03KZMn/IMG-9629.png" style="max-height:80px"></a>
 
         <!-- Toggle -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#charadexnav">
@@ -57,3 +57,24 @@
 
     </div>
 </nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const header = document.getElementById('header');
+  let lastScrollY = 0;
+
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY) {
+      // User is scrolling down, hide the header
+      header.classList.remove('visible');
+    } else {
+      // User is scrolling up, show the header
+      header.classList.add('visible');
+    }
+
+    lastScrollY = currentScrollY;
+  });
+});
+  </script>

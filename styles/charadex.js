@@ -738,6 +738,24 @@ const frontPage = (options) => {
 
 }; 
 
+    document.addEventListener('DOMContentLoaded', () => {
+  const header = document.getElementById('header');
+  let lastScrollY = 0;
+
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY) {
+      // User is scrolling down, hide the header
+      header.classList.remove('visible');
+    } else {
+      // User is scrolling up, show the header
+      header.classList.add('visible');
+    }
+
+    lastScrollY = currentScrollY;
+  });
+});
 
 /* ==================================================================== */
 /* Softload pages

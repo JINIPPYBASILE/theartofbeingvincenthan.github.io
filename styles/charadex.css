@@ -703,3 +703,18 @@ z-index:20
   border: 3px #ffffff solid;
   border-radius:20px;
 }
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* Visible header */
+#header.visible {
+  transform: translateY(-100%);
+}
