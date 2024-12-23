@@ -740,25 +740,21 @@ const frontPage = (options) => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('header');
-    let lastScrollY = window.scrollY;
-  
-    // Function to toggle the visibility of the header
-    const toggleHeader = () => {
-      const currentScrollY = window.scrollY;
-  
-      if (currentScrollY > 0 && currentScrollY < lastScrollY) {
-        // User is scrolling up (or near the top), show the header
-        header.classList.add('visible');
-      } else if (currentScrollY > 50) {
-        // User is scrolling down and not near the top, hide the header
-        header.classList.remove('visible');
-      }
-  
-      lastScrollY = currentScrollY;
-    };
   
     // Initially hide the header
     header.classList.remove('visible');
+  
+    const toggleHeader = () => {
+      const currentScrollY = window.scrollY;
+  
+      if (currentScrollY === 0) {
+        // At the very top, hide the header
+        header.classList.remove('visible');
+      } else {
+        // Otherwise, ensure the header is visible
+        header.classList.add('visible');
+      }
+    };
   
     // Attach the scroll listener
     window.addEventListener('scroll', toggleHeader);
