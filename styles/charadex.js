@@ -738,24 +738,31 @@ const frontPage = (options) => {
 
 }; 
 
-    document.addEventListener('DOMContentLoaded', () => {
-  const header = document.getElementById('header');
-  let lastScrollY = 0;
-
-  window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
-
-    if (currentScrollY > lastScrollY) {
-      // User is scrolling down, hide the header
-      header.classList.remove('visible');
-    } else {
-      // User is scrolling up, show the header
-      header.classList.add('visible');
-    }
-
-    lastScrollY = currentScrollY;
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.getElementById('header');
+    let lastScrollY = window.scrollY;
+  
+    // Function to toggle the visibility of the header
+    const toggleHeader = () => {
+      const currentScrollY = window.scrollY;
+  
+      if (currentScrollY > 0 && currentScrollY < lastScrollY) {
+        // User is scrolling up (or near the top), show the header
+        header.classList.add('visible');
+      } else if (currentScrollY > 50) {
+        // User is scrolling down and not near the top, hide the header
+        header.classList.remove('visible');
+      }
+  
+      lastScrollY = currentScrollY;
+    };
+  
+    // Initially hide the header
+    header.classList.remove('visible');
+  
+    // Attach the scroll listener
+    window.addEventListener('scroll', toggleHeader);
   });
-});
 
 /* ==================================================================== */
 /* Softload pages
