@@ -562,7 +562,8 @@ html {
     padding: 1rem;
     -ms-flex: 1 1 auto!important;
     flex: 1 1 auto!important;
-    background-color: #ffffff
+    background-color: #ffffff;
+    margin-bottom:20px !important
 }
 
 .container {
@@ -754,4 +755,8 @@ z-index:20
   min-height: 50px;
   padding: 0 20px;
   text-align: center;
+}
+
+.nav-link {
+  display:block;
 }
