@@ -15,13 +15,13 @@ body {
   /* ============================================================= */
   /* Primary Color
   ================================================================ */
-  --cd-primary-color:                    #8FB7D4;
+  --cd-primary-color:                    #5f4063;
   --cd-primary-text-color:               #fff;
 
   /* ============================================================= */
   /* Secondary Color
   ================================================================ */
-  --cd-secondary-color:                  #939799;
+  --cd-secondary-color:                  #854e73;
   --cd-secondary-text-color:             #fff;
 
   /* ============================================================= */
@@ -37,7 +37,7 @@ body {
   /* ============================================================= */
   /* Text
   ================================================================ */
-  --cd-body-text-color:                  #303030;
+  --cd-body-text-color:                  #350031;
   --cd-faded-text-color:                 #575757;
 
   /* ============================================================= */
@@ -51,7 +51,7 @@ body {
   /* ============================================================= */
   /* Navbar
   ================================================================ */
-  --cd-navbar-background-color:          #392158;
+  --cd-navbar-background-color:          #482b4c;
   --cd-navbar-brand-color:               var(--cd-primary-color);
   --cd-navbar-brand-color-hover:         var(--cd-secondary-color);
   --cd-navbar-text-color:                var(--cd-content-background-color);
@@ -400,6 +400,7 @@ a:active {
   border-style: var(--cd-card-border-style) !important;
   border-color: var(--cd-card-border-color) !important;
   border-radius: var(--cd-border-radius) !important;
+  border-style:none !important
 }
 
 .card-header {
@@ -506,6 +507,8 @@ h4, h5, h6 {
   font-family: var(--cd-navbar-font-family) !important;
 }
 
+
+
 hr {
   border-top-color: var(--cd-hr-border-color) !important;
   border-top-width: var(--cd-hr-border-width) !important;
@@ -525,11 +528,25 @@ img {
 /* Chee's Tweaks
 /* ============================================================= */
 
+.hero-title {
+  color: var(--cd-primary-text-color);
+  background-color: var(--cd-primary-color);
+  border-radius: var(--cd-border-radius);
+  border-bottom-left-radius:0px;
+  border-bottom-right-radius:0px;
+  font-family: var(--cd-header-font-family);
+  display: flex;
+  min-height: 250px;
+  font-weight: 800;
+}
+
+
+
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background:linear-gradient(0deg, rgb(127, 101, 164) 70%, rgba(250,242,255,0) 100%) !important;
+  background:linear-gradient(0deg, #c394b6 70%, rgba(250,242,255,0) 100%) !important;
   
 }
 
@@ -545,16 +562,17 @@ html {
     padding: 1rem;
     -ms-flex: 1 1 auto!important;
     flex: 1 1 auto!important;
-    background-color: rgb(127, 101, 164) 
+    background-color: #ffffff
+}
+
+.container {
+  max-width:950px;
 }
 
 @media (min-width: 768px) {
     #main-container {
         padding: 5rem 1.5rem;
     }
-.container {
-  max-width:950px;
-}
 /* Fades container in on load so its not as jarring */
 .softload {
   opacity: 0;
@@ -630,18 +648,6 @@ p:last-child {
     white-space: break-spaces;
 }
 
-.hero-title {
-    color: var(--cd-primary-text-color);
-    background-color: var(--cd-primary-color);
-    border-radius: var(--cd-border-radius);
-    font-family: var(--cd-header-font-family);
-    display: flex;
-    padding: 1.5rem;
-    min-height: 250px;
-    font-weight: 800;
-    font-size: 2.5rem;
-}
-
 @media (min-width: 768px) {
     .hero-title {
         letter-spacing: 2px;
@@ -649,17 +655,26 @@ p:last-child {
     }
 }
 
+}
+
 /*JINIPPY/VERNE TWEAKS (figuratively and literally) */
 .taobvh-logo {
-  filter: hue-rotate(70deg);
+  filter: hue-rotate(90deg);
   height:70px;
   object-fit: cover;
   object-position: center; 
 }
 
+h1 {
+  font-weight:900;
+}
+
+.index-logo-thing {
+  transform:scale(0.85);
+}
 
 .taobvh-picture-logo {
-  filter: hue-rotate(70deg);
+  filter: hue-rotate(90deg);
 }
 
 .secondaryheader {
@@ -670,4 +685,21 @@ p:last-child {
 .secondaryheader .dropdown{
 position:absolute;
 z-index:20
+}
+
+
+.secondaryheader .nav-link {
+  color:#baacb6;
+  font-weight:700;
+  text-shadow:1.5px 1.5px 0px #350031, -1.5px -1.5px 0px #350031, 1.5px -1.5px 0px #350031, -1.5px 1.5px 0px #350031, 1.5px 0px 0px #350031, 0px -1.5px 0px #350031, 0px 1.5px 0px #350031, -1.5px 0px 0px #350031  ; 
+  transition: all 0.4s ease
+}
+.secondaryheader .nav-link:hover {
+  color:#e2b5d6;
+}
+
+.showcase-card {
+  background-color:#ae90a6;
+  border: 3px #ffffff solid;
+  border-radius:20px;
 }
