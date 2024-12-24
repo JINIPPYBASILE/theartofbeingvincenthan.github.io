@@ -56,12 +56,13 @@
     <-- Header
     <-------------------------------------------------------------------- -->
     <div class="load-html" id="header" data-source="includes/header.html"></div>
+    <div class="load-html" id="fandomheader" data-source="includes/fandomheader.html"></div>
 
 
     <!-- Spinner for loading-->
     <div class="spinner-border m-auto" id="loading"></div>
-
-
+  <div class="ml-lg-5 px-5">    <div class="ml-lg-3"> 
+    <div class="load-html" id="secondaryheader" data-source="includes/secondaryheader.html"></div></div></div>
     <!-- --------------------------------------------------------------------
     <-- Masterlist
     <-------------------------------------------------------------------- -->
@@ -75,9 +76,15 @@
 
             <!-- Filters
             ----------------------------------------------------------------- -->
-            <div class="card p-md-5 p-4 mb-4">
+            <div class="card p-md-5 p-4 mb-4 mt-n5">
+               <p> in: <a href="index.html">The Art of Being Vincent Han Wiki</a></p>
+        
+               
+                <h3 class="mb-0"><a href="masterlist.html">Characters</a></h3>
+                <p>Category Page</p>
 
-                <h3 class="mb-0"><a href="masterlist.html">Species Masterlist</a></h3>
+               <p> This category lists the characters from the Art of Being Vincent Han's <a href="universe.html">Main Universe</a>. 
+            Alternate Universe Characters will be featured, but will be labelled. </p>
 
                 <!-- Faux Folders
                 <-- Remove this if you'd like to make your own buttons instead!
@@ -179,13 +186,14 @@
         <!-- Singular Item
         ------------------------------------------------------------------- -->
         <li class="col-12 p-2" id="charadex-card">
+            <p class="ml-5"> in: <a href="index.html">The Art of Being Vincent Han Wiki</a></p>
 
             <!-- Actual Card -->
             <div class="card">
 
                 <!-- Header -->
                 <h2 class="card-header text-center p-4">
-                    <a class="cardlink design"></a> (<a class="cardlinkalt" href="">#<span class="id"></span></a>)
+                    <a class="cardlink name"></a> (<a class="cardlinkalt" href="">#<span class="design"></span></a>)
                 </h2>
 
 
@@ -193,20 +201,20 @@
                 <div class="px-md-5 pt-md-5 p-4">
                     
                     <!-- Character Info -->
-                    <div class="row no-gutters">
+                
 
 
                         <!-- Image -->
-                        <div class="col-md-5 p-3">
-                            <div class="mx-auto w-100 text-center" oncontextmenu="return false">
-                                <img class="image img-fluid" src="">
-                            </div>
-                        </div>
+                    
 
 
                         <!-- Information List -->
-                        <div class="col-md-7 p-3">
-
+                       <div class=" character-basic-info-card col-md-5" style="float:right">
+                        <div class=" p-3" >
+                            <h4 class="nameecho"></h4>
+                            <div class="mx-auto w-100 text-center" oncontextmenu="return false">
+                                <img class="image img-fluid col-12" src="">
+                            </div>
                             <!-- Item -->
                             <div class="d-flex justify-content-between mb-2">
                                 <b class="text-muted">Owner</b>
@@ -273,8 +281,10 @@
                                 <div class="pl-3 text-pre notes"></div>
                             </div>
 
+                       </div>
                             <hr>
 
+                            
                             <!-- Item -->
                             <div class="">
                                 <b class="text-muted">Transaction Log</b>
@@ -286,10 +296,55 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                             </div>
 
                             <!-- Add more list items above this line-->
                         </div>
+                         <!-- Item -->
+                    
+                            <div class="pl-3 text-pre quote"></div>
+
+                          
+                            <h5>About</h5>
+                            <p class="mainblurb"></p>
+                           
+
+                       
+                            <h5>Early Life</h5>
+                            <div class="earlylife"></div>
+                        
+
+                          
+                            <h5>Main Story</h5>
+                            <div class="mainstory"></div>
+                           
+
+                         
+                            <h5>Appearance</h5>
+                            <p class="appearance"></p>
+                      
+
+                         
+                            <h5>Personality</h5>
+                            <div class="personality"></div>
+                         
+
+                       
+                            <h5>Talents and Abilities</h5>
+                            <div class="talents"></div>
+                      
+
+                       
+                            <h5>Relationships</h5>
+                            <div class="relationships"></div>
+                           
+
+                            <h5>Trivia</h5>
+                            <div class="trivia"></div>
+                    
+                        </div>
+                
                     </div>
 
                     <!-- Where to Update -->
@@ -301,7 +356,9 @@
         </li>
 
 
-    </div>
+
+</div>
+</div>
 
     <!-- ----------------------------------------------------------------- -->
     <!-- JS                                                                -->

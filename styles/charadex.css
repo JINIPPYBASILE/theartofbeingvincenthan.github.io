@@ -776,3 +776,9 @@ z-index:20
 .global-top-navigation a{
   color:#350031
 }
+
+.character-basic-info-card {
+  border:#350031 3px solid;
+  border-radius:20px;
+  background-color:#e2dce0
+}
