@@ -55,7 +55,6 @@
     <!-- --------------------------------------------------------------------
     <-- Header
     <-------------------------------------------------------------------- -->
-    
     <div class="load-html" id="header" data-source="includes/header.html"></div>
 
 
@@ -78,7 +77,7 @@
             ----------------------------------------------------------------- -->
             <div class="card p-md-5 p-4 mb-4">
 
-                <h3 class="mb-0"><a href="faq.html">FAQ</a></h3>
+                <h3 class="mb-0"><a href="masterlist.html">Species Masterlist</a></h3>
 
                 <!-- Faux Folders
                 <-- Remove this if you'd like to make your own buttons instead!
@@ -88,14 +87,26 @@
                     <div class="row no-gutters mx-n1"></div>
                 </div>
 
-
-                <!-- Search Bar -->
+                <!-- Filters -->
                 <div style="display:none;" id="charadex-filters">
                     <hr class="w-100 mb-4">
                     <div class="row no-gutters m-n1">
-                        <div class="col p-1">
+
+                        <!-- Custom Filter -->
+                        <div class="col-md-3 col-12 p-1" style="display: none;">
+                            <select class="form-control bg-faded" id="filter"></select>
+                        </div>
+
+                        <!-- Search Filter -->
+                        <div class="col-md-3 col-3 p-1" style="display: none;">
+                            <select class="form-control bg-faded" id="search-filter"></select>
+                        </div>
+
+                        <!-- Search Bar -->
+                        <div class="col-md col-9 p-1">
                             <input class="form-control bg-faded search" type="search" placeholder="Search" id="search">
                         </div>
+
                     </div>
                 </div>
 
@@ -109,6 +120,15 @@
                     </div>
                 </div>
 
+                <!-- Prev & Next Topbar -->
+                <div style="display: none;" id="prevNext">
+                    <hr class="mb-4">
+                    <div class="row no-gutters px-2 mb-n3 font-weight-bold text-uppercase">
+                        <div class="col-6 px-1"><a id="entryPrev" href=""><i class="fa fa-chevron-left mr-2"></i><span></span></a></div>
+                        <div class="col-6 px-1 text-right order-md-1"><a id="entryNext" href=""><span></span><i class="fa fa-chevron-right ml-2"></i></a></div>
+                    </div>
+                </div>
+
             </div>
 
 
@@ -117,56 +137,6 @@
             <ul class="row no-gutters list list-unstyled m-n2"></ul>
 
         </div>
-
-    </div>
-
-
-    <!-- --------------------------------------------------------------------
-    <-- Footer
-    <-------------------------------------------------------------------- -->
-    
-    <div class="load-html" id="footer" data-source="includes/footer.html"></div>
-
-
-    <!-- --------------------------------------------------------------------
-    <-- Repeat Items
-    <-- Do not remove 'display:none;'
-    <-- Edit these to your liking
-    <-------------------------------------------------------------------- -->
-    <div style="display:none;">
-
-
-        <!-- Gallery Items
-        ------------------------------------------------------------------- -->
-        <li class="col-12 p-2" id="charadex-entries">
-            <div class="card d-block p-4">
-                <a class="d-block cardlink" href="">
-                    <b><span class="question"></span></b>
-                </a>
-                <div class="px-4 pt-2 text-pre answer"></div>
-                <hr>
-                <div class="row no-gutters small px-2 mb-n2">
-                    <div class="col-auto"><b>Tags</b></div>
-                    <div class="col text-right tags"></div>
-                </div>
-            </div>
-        </li>
-
-
-        <!-- Singular Item
-        ------------------------------------------------------------------- -->
-        <li class="col-12 p-2" id="charadex-card">
-            <div class="card d-block p-4">
-                <b><span class="question"></span></b>
-                <div class="px-4 pt-2 text-pre answer"></div>
-                <hr>
-                <div class="row no-gutters small px-2 mb-n2">
-                    <div class="col-auto"><b>Tags</b></div>
-                    <div class="col text-right tags"></div>
-                </div>
-            </div>
-        </li>
-
 
     </div>
 
