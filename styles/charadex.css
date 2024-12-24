@@ -762,18 +762,17 @@ z-index:20
 }
 
 .global-top-navigation {
-  --fandom-top-nav-icon-color: #291927;
-  --fandom-top-nav-icon-color--hover: #520044;
   align-items: center;
   background-color: #f5f3f5;
-  display: flex
-;
-  height: 46px;
+  height: 70.2px;
   justify-content: space-between;
   left: 0;
-  padding: 0 18px;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 500;
+}
+
+.global-top-navigation a{
+  color:#350031
 }
